@@ -1,10 +1,7 @@
 const { Browser } = require('../lib');
 
-async function Details(url) {
-    if (!this.page) {
-        this.page = await Browser.NewPage();
-    }
-    const page = this.page;
+async function Details(ctx, url) {
+    const page = await Browser.NewPage();
     async function getTextContent(selector) {
         const el = await page.$(selector);
         const attr = await el.getProperty('textContent');
