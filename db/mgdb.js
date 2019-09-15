@@ -4,6 +4,11 @@ const dbName = 'ninomax';
 
 let mongoClient;
 let mongoDb;
+
+exports.collection = async function(colname){
+    return mongoDb.collection(colname);
+};
+
 exports.connect = async function(){
     if (!mongoClient ){
         mongoClient = new MongoClient(url)
@@ -15,4 +20,4 @@ exports.connect = async function(){
             console.log('Failed to connect to mongodb');
         }
     }
-}
+};
