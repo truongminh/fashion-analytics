@@ -1,0 +1,56 @@
+{
+    "shapes": [
+        {
+            "name_eng":"short_sleeve_top",
+            "name_vn":"ao_ngan_tay"
+        },
+        {
+            "name_eng":"long_sleeve_top",
+            "name_vn": "ao_dai_tay"
+        },
+        {
+            "name_env":"short_sleeve_outwear",
+            "name_vn":"ao_khoac_ngan_tay"
+        },
+        {
+            "name_env":"long_sleeve_outwear",
+            "name_vn":"ao_khoac_dai_tay"
+        },
+        {
+            "name_env":"vest",
+            "name_vn":"ao_vest"
+        },
+        {
+            "name_env":"sling",
+            "name_vn":"ao_hai_day"
+        },
+        {
+            "name_env":"shorts",
+            "name_vn":"quan_dui"
+        },
+        {
+            "name_env":"trousers",
+            "name_vn":"quan_dai"
+        },
+        {
+            "name_env":"skirt",
+            "name_vn":"vay_ngan"
+        },
+        {
+            "name_env":"short_sleeve_dress",
+            "name_vn":"vay_ngan_tay"
+        },
+        {
+            "name_env":"long_sleeve_dress",
+            "name_vn":"vay_dai_tay"
+        },
+        {
+            "name_env":"vest_dress",
+            "name_vn":"vay_ghile"
+        },
+        {
+            "name_env":"sling_dress",
+            "name_vn":"vay_hai_day"
+        }
+    ]
+}

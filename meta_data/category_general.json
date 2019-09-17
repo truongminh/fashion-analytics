@@ -1,0 +1,44 @@
+{
+    "categories":[
+        {
+            "name_eng":"tops",
+            "name_vn" : "ao"
+        },
+        {
+            "name_eng":"accessories",
+            "name_vn" : "phu_kien"
+        },
+        {
+            "name_eng" : "dresses",
+            "name_vn" : "vay"
+        },
+        { 
+            "name_eng" : "bottoms",
+            "name_vn" : "quan"
+        },
+        { 
+            "name_eng" : "Footwear"
+        },
+        { 
+            "name_eng" : "All-in-ones"
+        },
+        { 
+            "name_eng" : "Hoisery"
+        },
+        { 
+            "name_eng" : "Outerwear"
+        },
+        { 
+            "name_eng" : "Underwear"
+        },
+        {
+            "name_eng" : "Swim"
+        },
+        {
+            "name_eng" : "Nightwear"
+        },
+        {
+            "name_eng" : "Sui-sets"
+        }
+    ]
+}
