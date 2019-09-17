@@ -1,4 +1,21 @@
 module.exports = [
-    'http://www.ninomaxx.com.vn/san-pham-nu',
-    'http://www.ninomaxx.com.vn/san-pham-nam'
+    'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/ao-det',
+    'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/ao-khoac-',
+    'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/ao-lien-quan',
+    'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/ao-so-mi-',
+    'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/ao-thun-',
+    'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/chan-vay',
+    'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/dam',
+    'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/quan-dai',
+    'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/quan-jeans',
+    'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/quan-lung',
+    'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/quan-shorts',
+    'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/ao-det',
+    'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/ao-khoac-',
+    'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/ao-so-mi-',
+    'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/ao-thun-',
+    'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/ao-thun-polo',
+    'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/quan-dai',
+    'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/quan-jeans-',
+    'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/quan-shorts'    
 ];
