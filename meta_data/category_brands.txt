@@ -21,11 +21,10 @@ Ninomax, nam
     - quan-jeans => bottoms, denim,
     - quan-short => bottos, shorts
 
-
 Canifa, nu
     - ao-phong (ao-thun)            => tops, t-shirts
     - ao-phong-polo (ao-thun-polo)  => tops, t-shirts, polos
-    - ao-somi                       => tops, shirts, 
+    - ao-somi                       => tops, shirts
     - ao-khoac                      => tops, outerwear
     - ao-len                        => tops, sweater
     - ao-ni-chui-dau                => tops, sweatshirts-hoodies
@@ -35,17 +34,17 @@ Canifa, nu
     - quan-vai                      => bottoms, trouser
     - quan-kaki                     => bottoms, trouser
     - quan-shorts                   => bottoms, shorts
-    - ao-phong-active               => tops, t-shirts, sport.
+    - ao-phong-active               => tops, t-shirts, sport
     - quan-active                   => bottoms, sport
 
     # do mac nha
-    - ao-mac-nhac
-    - quan-mac-nha
-    - ao-ba-lo-mac-nha
-    - vay-mac-nha
-    - bo-mac-nha
-    - ao-mac-trong
-    - quan-mac-trong
+    - ao-mac-nhac                   =>  top, home
+    - quan-mac-nha                  =>  bottom, home
+    - ao-ba-lo-mac-nha              =>  top, home
+    - vay-mac-nha                   =>  dress, home
+    - bo-mac-nha                    =>  all-in-one, home
+    - ao-mac-trong                  =>  top, inner-top
+    - quan-mac-trong                =>
     - quan-tat-mac-trong
     - quan-lot
 
