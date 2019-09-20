@@ -1,0 +1,93 @@
+{
+    "brand": "ninomax" ,
+    "groups" : [
+        {
+            "group":"women",
+            "urls" : [
+                {
+                    "url":"http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/ao-det",
+                    "category": ["knitwear"]
+                },
+        
+                {
+                    "url" : "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/ao-khoac-",
+                    "category" : ["outerwear", "jackets"]
+                },
+        
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/ao-lien-quan",
+                    "category": ["jumpsuits-and-rompers"]
+                },
+                
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/ao-so-mi-",
+                    "category" : ["shirts-and-blouses"]
+                },
+                
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/ao-thun-",
+                    "category" : ["tops", "t-shirts"]
+                },
+                
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/chan-vay",
+                    "category" : ["skirts"]
+                },
+        
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/dam",
+                    "category" : ["dresses"]
+                },
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/quan-dai",
+                    "category" : ["pants"]
+                },
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/quan-lung",
+                    "category" : ["pants"]
+                },
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/quan-shorts",
+                    "category" : ["shorts"]
+                }
+            ]
+        },
+        {
+            "group": "men",
+            "urls": [
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/ao-det",
+                    "category": ["knitwear"]
+                },
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/ao-khoac-",
+                    "category" : ["outerwear"]
+                },
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/ao-so-mi-",
+                    "category": ["shirts-and-blouses"]
+                },
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/ao-thun-",
+                    "category": ["tops", "t-shirts"]
+                },
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/ao-thun-polo",
+                    "category": ["tops", "t-shirts"]
+                },
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/quan-dai",
+                    "category": ["pants"]
+                },
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/quan-jeans-",
+                    "category": ["jeans"]
+                },
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/quan-shorts",
+                    "category": ["shorts"]
+                }
+            ]
+        }
+    ]
+}

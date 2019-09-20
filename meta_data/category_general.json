@@ -1,44 +1,209 @@
-{
-    "categories":[
+{ 
+    "group" : "women",
+
+    "categories": [
         {
-            "name_eng":"tops",
-            "name_vn" : "ao"
+            "name_eng": "dresses",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/dresses.html",
+            "categories": [
+                "short-dresses", "midi-dresses", 
+                "maxi-dresses", "bodycon-dresses",
+                "party-dresses", "lace-dresses",
+                "shirt-dresses", "sequin-dresses",
+                "wrap-dresse", "skater-dresses",
+                "sweater-dresses"
+            ]
         },
+
         {
-            "name_eng":"accessories",
-            "name_vn" : "phu_kien"
+            "name_eng" : "tops",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/tops.html",
+            "categories" : [
+                "sleeveless", "short-sleeves", 
+                "long-sleeves", "sportswear-tops", 
+                "cropped-tops", "basics", 
+                "bodysuits","t-shirts"]
         },
+
         {
-            "name_eng" : "dresses",
-            "name_vn" : "vay"
-        },
-        { 
-            "name_eng" : "bottoms",
-            "name_vn" : "quan"
-        },
-        { 
-            "name_eng" : "Footwear"
-        },
-        { 
-            "name_eng" : "All-in-ones"
-        },
-        { 
-            "name_eng" : "Hoisery"
-        },
-        { 
-            "name_eng" : "Outerwear"
-        },
-        { 
-            "name_eng" : "Underwear"
-        },
-        {
-            "name_eng" : "Swim"
-        },
-        {
-            "name_eng" : "Nightwear"
+            "name_eng" : "shirts-and-blouses",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/shirts-blouses.html",
+            "categories" : [ 
+                "shirts", "blouses", 
+                "tunics", "off-shoulder", 
+                "denim-shirts"]
         },
         {
-            "name_eng" : "Sui-sets"
+            "name_eng" : "cardigans-sweaters",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/cardigans-sweaters.html",
+            "categories": [
+                "cardigans", "sweaters"
+            ]
+        },
+        {
+            "name_eng" : "blazers",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/blazers-vests.html",
+            "categories" : ["kimonos"]
+        },
+        {
+            "name_eng" : "pants",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/pants.html",
+            "categories": [
+                "leggings", "joggers", 
+                "slim", "flare", 
+                "chinos-slacks", 
+                "culottes", "dress-pants"
+            ]
+        },
+        
+        {
+            "name_eng" : "jeans",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/jeans.html",
+            "categories": [
+                "skinny", "shaping", 
+                "slim", "straight",
+                "bootcut", "flare",
+                "loose"
+            ]
+        },
+
+        {
+            "name_eng" : "outerwear",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/jackets-coats.html",
+            "categories" : [ 
+                "jackets", "coats",
+                "parkas", "biker-jackets",
+                "denim-jackets"
+            ]
+        },
+        
+        {
+            "name_eng" : "hoodies",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/hoodies-sweatshirts.html",
+            "categories" : []
+        },
+        
+        {
+            "name_eng" : "sweatshirts",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/hoodies-sweatshirts.html",
+            "categories" : []
+        },
+
+        {
+            "name_eng" : "basics",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/basics.html",
+            "categories" : [
+                "tops", "cardigans-and-sweaters",
+                "dresses-and-skirts", "pants-and-leggings"
+            ]
+        },
+
+        {
+            "name_eng" : "skirts",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/skirts.html",
+            "categories": [
+                "short-skirts", "midi-skirts", 
+                "long-skirts", "pencil-skirts",
+                "denim-skirts", "high-waisted-skirts",
+                "skater-skirts", "wrap-skirts"
+            ]
+        },
+        {
+            "name_eng" : "swimwear",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/swimwear.html",
+            "categories" : [
+                "bikini", "swimsuits", "beachwear"]
+        },
+
+        {
+            "name_eng" : "shorts",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/shorts.html",
+            "categories": [
+                "denim-shorts", "high-waisted-shorts"
+            ]
+        },
+        {
+            "name_eng" : "jumpsuits-rompers",
+            "sample_url": "https://www2.hm.com/en_us/women/products/jumpsuits-rompers.html",
+            "categories": ["long-jumpsuits", "rompers-playsuits"]
+        },
+        {
+            "name_eng" : "knitwear",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/knit.html",
+            "categories" : ["sweaters", "cardigans", "turtlenecks"]
+        },
+
+        {
+            "name_eng" : "accessories",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/accessories.html",
+            "categories": []
+        },
+
+        {
+            "name_eng" : "lingerie",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/lingerie.html",
+            "categories": [
+                "bras", "briefs-and-panties",
+                "bodysuits-corsets", "shaping-lingerie",
+                "accesseries"
+            ]
+        },
+
+        {
+            "name_eng" : "sleepwear-and-longewear",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/sleepwear.html",
+            "categories" : [
+                "pajamas", "night-slips-and-robes"
+            ]
+        },
+        
+        {
+            "name_eng" : "socks-and-tights",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/socks-tights.html",
+            "categories" : [
+                "socks", "tights-and-leggings",
+                "shaping"
+            ]
+        },
+
+        {
+            "name_eng" : "sportswear",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/workout-clothes.html",
+            "categories": [
+                "tops", "sport-bras",
+                "jackets", "bottoms", 
+                "accessories", "yoga"
+            ]
+        },
+
+        {
+            "name_eng" : "maternity-wear",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/maternity-clothes.html",
+            "categories": [
+                "tops", "bottoms",
+                "jeans", "dresses",
+                "lingerie-and-tights", 
+                "nursing"
+            ]
+        },
+
+        {
+            "name_eng" : "plus-sizes",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/plus-size.html",
+            "categories" : [
+                "tops", "bottoms",
+                "jeans", "basics",
+                "tunics", "dresses",
+                "jackets-and-blazers",
+                "sportswear", "swimwear",
+                "lingerie-and-tights"
+            ]
+        },
+
+        {
+            "name_eng" : "beauty",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/beauty.html",
+            "categories": []
         }
     ]
 }
