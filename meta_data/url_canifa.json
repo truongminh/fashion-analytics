@@ -1,0 +1,64 @@
+{
+    "brand": "canifa" ,
+    "groups" : [
+        {
+            "group":"women",
+            "urls" : [
+                {
+                    "url":"https://canifa.com/nu/danh-muc-san-pham/ao-phong-khong-co.html",
+                    "category": ["tops", "t-shirts"]
+                },
+        
+                {
+                    "url" : "https://canifa.com/nu/danh-muc-san-pham/ao-phong/ao-phong-co-co.html",
+                    "category" : ["tops", "t-shirts"]
+                },
+        
+                {
+                    "url": "https://canifa.com/nu/danh-muc-san-pham/ao-so-mi.html",
+                    "category": ["shirts-and-blouses"]
+                },
+                
+                {
+                    "url": "https://canifa.com/nu/danh-muc-san-pham/ao-khoac.html",
+                    "category" : ["outerwear"]
+                },
+                
+                {
+                    "url": "https://canifa.com/ao-len-nu-cate.html",
+                    "category" : ["knitwear"]
+                },
+                
+                {
+                    "url": "https://canifa.com/catalog/category/view/s/ao-n-chui-d-u/id/2215/",
+                    "category" : ["hoodies"]
+                },
+        
+                {
+                    "url": "https://canifa.com/nu/danh-muc-san-pham/vay-lien.html",
+                    "category" : ["dresses"]
+                },
+                {
+                    "url": "https://canifa.com/nu/danh-muc-san-pham/chan-vay.html",
+                    "category" : ["skirts"]
+                },
+                {
+                    "url": "https://canifa.com/nu/danh-muc-san-pham/quan-jeans.html",
+                    "category" : ["jeans"]
+                },
+                {
+                    "url": "https://canifa.com/nu/danh-muc-san-pham/quan-vai.html",
+                    "category" : ["pants"]
+                },
+                {
+                    "url":"https://canifa.com/quan-kaki-nu-cate.html",
+                    "category":["pants"]
+                },
+                {
+                    "url":"https://canifa.com/nu/danh-muc-san-pham/quan-short.html",
+                    "category":["shorts"]
+                }
+            ]
+        }
+    ]
+}
