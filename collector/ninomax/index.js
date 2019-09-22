@@ -23,14 +23,15 @@ module.exports = async function (opts) {
                     console.log(`[WARNING] encounter existing product ${product_url} in ${parent_url}`);
                     continue;
                 }
+                const stime = new Date();
                 const row = await details(ctx, product_url);
+                const ctime = new Date();
                 const price = PriceToNumber(row.product_price);
                 const currency = 'dong';
-                const ctime = new Date();
                 const params = {
                     ...row,
                     brand, time_key, product_url, parent_url,
-                    price, currency, ctime,
+                    price, currency, stime, ctime,
                 };
                 await saver.upsert(ctx, params);
                 console.log('saved', params);
