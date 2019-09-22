@@ -193,6 +193,12 @@
             "sample_url" : "https://www2.hm.com/en_us/women/products/beauty.html",
             "categories": []
         },
+        
+        {
+            "name_eng" : "shoes",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/shoes.html",
+            "categories" : []
+        },
 
         {
             "name_eng" : "accessories",

@@ -1,0 +1,59 @@
+{
+    "brand": "sevenam" ,
+    "groups" : [
+        {
+            "group":"women",
+            "urls" : [
+                {
+                    "url" : "http://shop.sevenam.vn/thoi-trang-cong-so/dam",
+                    "category" : ["dresses"]
+                },
+
+                {
+                    "url" : "http://shop.sevenam.vn/thoi-trang-cong-so/ao",
+                    "category": ["shirts-and-blouses"]
+                },
+                
+                {
+                    "url" : "http://shop.sevenam.vn/thoi-trang-cong-so/ao-khoac",
+                    "category":["outerwear"]
+                },
+
+                {
+                    "url" : "http://shop.sevenam.vn/thoi-trang-cong-so/quan-amp-vay",
+                    "category" : ["pants"]
+                },
+                
+                {
+                    "url" : "http://shop.sevenam.vn/thoi-trang-cong-so/do-len",
+                    "category" : ["skirts"]
+                },
+
+                {
+                    "url" : "http://shop.sevenam.vn/thoi-trang-cong-so/bo-lien",
+                    "category" : ["jumpsuits-and-rompers"]
+                },
+
+                {
+                    "url" : "http://shop.sevenam.vn/thoi-trang-cong-so/theo-bo",
+                    "category" : ["jumpsuits-and-rompers"]
+                },
+
+                {
+                    "url" : "http://shop.sevenam.vn/phu-kien/giay-nu",
+                    "category" : ["shoes"]
+                },
+
+                {
+                    "url":"http://shop.sevenam.vn/phu-kien/tui-nu",
+                    "category" : ["accessories/bags"]
+                },
+
+                {
+                    "url":"http://shop.sevenam.vn/phu-kien/phu-kien",
+                    "category" : ["accessories"]
+                }
+            ]
+        }
+    ]
+}
