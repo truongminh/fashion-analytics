@@ -6,12 +6,12 @@
             "urls" : [
                 {
                     "url":"https://canifa.com/nu/danh-muc-san-pham/ao-phong-khong-co.html",
-                    "category": ["tops", "t-shirts"]
+                    "category": ["tops/t-shirts"]
                 },
         
                 {
                     "url" : "https://canifa.com/nu/danh-muc-san-pham/ao-phong/ao-phong-co-co.html",
-                    "category" : ["tops", "polos"]
+                    "category" : ["tops/polos"]
                 },
         
                 {
@@ -77,11 +77,11 @@
                 },
                 {
                     "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/ao-thun-",
-                    "category":["tops", "t-shirts"]
+                    "category":["tops/t-shirts"]
                 },
                 {
                     "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/ao-thun-polo",
-                    "category":["tops", "polos"]
+                    "category":["tops/polos"]
                 },
                 {
                     "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/ao-thun-polo",

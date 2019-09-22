@@ -116,7 +116,7 @@
         },
 
         {
-            "name_eng" : "jumpsuits-rompers",
+            "name_eng" : "jumpsuits-and-rompers",
             "sample_url": "https://www2.hm.com/en_us/women/products/jumpsuits-rompers.html",
             "categories": ["long-jumpsuits", "rompers-playsuits"]
         },
@@ -192,6 +192,22 @@
             "name_eng" : "beauty",
             "sample_url" : "https://www2.hm.com/en_us/women/products/beauty.html",
             "categories": []
+        },
+        
+        {
+            "name_eng" : "shoes",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/shoes.html",
+            "categories" : []
+        },
+
+        {
+            "name_eng" : "accessories",
+            "sample_url":"https://www2.hm.com/en_us/women/products/accessories.html",
+            "categories":[
+                "bags", "belts", 
+                "jewelry", "hair-accessories",
+                "sunglasses", "hats-and-caps",
+                "wallets", "scarves"]
         }
     ]
 }
