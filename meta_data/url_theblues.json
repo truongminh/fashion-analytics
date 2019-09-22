@@ -1,0 +1,60 @@
+{
+    "brand": "canifa" ,
+    "groups" : [
+        {
+            "group":"women",
+            "urls" : [
+                {
+                    "url" : "https://theblues.com.vn/en/product-category/women-fashion/ao-khoat-thoi-trang-nu/",
+                    "category" : ["outerwear"]
+                },
+                {
+                    "url" : "https://theblues.com.vn/en/product-category/women-fashion/ao-somi-thoi-trang-nu/",
+                    "category" : ["shirts-and-blouses"]
+                },
+                {
+                    "url" : "https://theblues.com.vn/en/product-category/women-fashion/ao-thun-thoi-trang-nu/",
+                    "category" : ["tops/t-shirts"]
+                },
+                {
+                    "url" : "https://theblues.com.vn/en/product-category/women-fashion/dam/",
+                    "category" : ["dresses"]
+                },
+                {
+                    "url" : "https://theblues.com.vn/en/product-category/women-fashion/quan-jaens/",
+                    "category" : ["jeans"]
+                },
+                {
+                    "url" : "https://theblues.com.vn/en/product-category/women-fashion/quan-shorts-chan-vay/",
+                    "category" : ["jumpsuits-and-rompers"]
+                }
+            ]
+        },
+        
+        {
+            "group" : "men",
+            "urls" : [
+                {
+                    "url" : "https://theblues.com.vn/en/product-category/men-fashion/ao-khoac/",
+                    "category" : ["outerwear"]
+                },
+                {
+                    "url" : "https://theblues.com.vn/en/product-category/men-fashion/ao-somi/",
+                    "category" : ["shirts"]
+                },
+                {
+                    "url" : "https://theblues.com.vn/en/product-category/men-fashion/ao-thun/",
+                    "category" : ["tops/t-shirts"]
+                },
+                {
+                    "url" : "https://theblues.com.vn/en/product-category/men-fashion/quan-jeans/",
+                    "category" : ["jeans"]
+                },
+                {
+                    "url" : "https://theblues.com.vn/en/product-category/men-fashion/quan-shorts/",
+                    "category" : ["shorts"]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "brand": "canifa" ,
+    "groups" : [
+        {
+            "group":"women",
+            "urls" : [
+                {
+                    "url" : "https://evadeeva.com.vn/collections/ao",
+                    "category" : ["tops"]
+                },
+                {
+                    "url" : "https://evadeeva.com.vn/collections/dam",
+                    "category" : ["dresses"]   
+                },
+                {
+                    "url" : "https://evadeeva.com.vn/collections/vay",
+                    "category" : ["skirts"]
+                },
+                {
+                    "url" : "https://evadeeva.com.vn/collections/quan",
+                    "category": ["pants", "shorts"]
+                },
+                {
+                    "url": "https://evadeeva.com.vn/collections/jumpsuit",
+                    "category" : ["jumpsuits-and-rompers"]
+                },
+                {
+                    "url" : "https://evadeeva.com.vn/collections/ao-khoac",
+                    "category" : ["blazers"]
+                },
+                {
+                    "url" :"https://evadeeva.com.vn/collections/giay",
+                    "category" :["shoes"]
+                },
+                {
+                    "url" : "https://evadeeva.com.vn/collections/tui-xach",
+                    "category" : ["accessories.bags"]
+                },
+                {
+                    "url" : "https://evadeeva.com.vn/collections/vong-co",
+                    "category" : ["accessories.jewelry"]
+                },
+                {
+                    "url" : "https://evadeeva.com.vn/collections/bong-tai",
+                    "category" : ["accessories.jewelry"]
+                },
+                {
+                    "url" : "https://evadeeva.com.vn/collections/that-lung",
+                    "category" : ["accessories.belts"]
+                },
+                {
+                    "url" : "https://evadeeva.com.vn/collections/khan",
+                    "category" : ["accessories.scarves"]
+                }
+            ]
+        }
+    ]
+}
