@@ -1,8 +1,34 @@
-const { Browser } = require('../lib');
+const Browser = require('../lib/browser');
 
-async function* Listing(ctx, url) {
+const sleep = (t = 1000) => new Promise((r) => setTimeout(r, t));
+
+async function* ListingMany(ctx, urls) {
     const page = await Browser.NewPage();
-    const sleep = (t = 1000) => new Promise((r) => setTimeout(r, t));
+    const detail_urls = [];
+    let done = false;
+    (async () => {
+        for (let parent_url of urls) {
+            try {
+                const it = ListingOne(ctx, page, parent_url);
+                for await (const detail_url of it) {
+                    detail_urls.push({ detail_url, parent_url });
+                }
+            } catch (e) {
+                console.log(e.stack || e);
+            }
+        }
+        done = true;
+    })();
+    while (!done) {
+        while (detail_urls.length) {
+            yield detail_urls.pop();
+        }
+        await sleep(1000);
+    }
+    await page._close();
+}
+
+async function* ListingOne(ctx, page, url) {
     // increase max delay on slow network
     const max_delay = 10000;
     const delay = 100;
@@ -45,4 +71,4 @@ async function* Listing(ctx, url) {
     }
 }
 
-module.exports = Listing;
+module.exports = ListingMany;
