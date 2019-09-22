@@ -22,7 +22,7 @@
                 "sleeveless", "short-sleeves", 
                 "long-sleeves", "sportswear-tops", 
                 "cropped-tops", "basics", 
-                "bodysuits","t-shirts"]
+                "bodysuits","t-shirts", "polos"]
         },
 
         {
@@ -34,7 +34,7 @@
                 "denim-shirts"]
         },
         {
-            "name_eng" : "cardigans-sweaters",
+            "name_eng" : "cardigans-and-sweaters",
             "sample_url" : "https://www2.hm.com/en_us/women/products/cardigans-sweaters.html",
             "categories": [
                 "cardigans", "sweaters"
@@ -76,19 +76,11 @@
                 "denim-jackets"
             ]
         },
-        
         {
-            "name_eng" : "hoodies",
+            "name_eng" : "hoodies-and-sweatshirts",
             "sample_url" : "https://www2.hm.com/en_us/women/products/hoodies-sweatshirts.html",
-            "categories" : []
+            "categories" : ["hoodies", "sweatshirts"]
         },
-        
-        {
-            "name_eng" : "sweatshirts",
-            "sample_url" : "https://www2.hm.com/en_us/women/products/hoodies-sweatshirts.html",
-            "categories" : []
-        },
-
         {
             "name_eng" : "basics",
             "sample_url" : "https://www2.hm.com/en_us/women/products/basics.html",
@@ -122,21 +114,17 @@
                 "denim-shorts", "high-waisted-shorts"
             ]
         },
+
         {
             "name_eng" : "jumpsuits-rompers",
             "sample_url": "https://www2.hm.com/en_us/women/products/jumpsuits-rompers.html",
             "categories": ["long-jumpsuits", "rompers-playsuits"]
         },
+
         {
             "name_eng" : "knitwear",
             "sample_url" : "https://www2.hm.com/en_us/women/products/knit.html",
             "categories" : ["sweaters", "cardigans", "turtlenecks"]
-        },
-
-        {
-            "name_eng" : "accessories",
-            "sample_url" : "https://www2.hm.com/en_us/women/products/accessories.html",
-            "categories": []
         },
 
         {

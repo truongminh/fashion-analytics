@@ -11,7 +11,7 @@
         
                 {
                     "url" : "https://canifa.com/nu/danh-muc-san-pham/ao-phong/ao-phong-co-co.html",
-                    "category" : ["tops", "t-shirts"]
+                    "category" : ["tops", "polos"]
                 },
         
                 {
@@ -56,6 +56,43 @@
                 },
                 {
                     "url":"https://canifa.com/nu/danh-muc-san-pham/quan-short.html",
+                    "category":["shorts"]
+                }
+            ]
+        },
+        {
+            "group" : "men",
+            "urls" : [
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/ao-det",
+                    "category":["knitwear"]
+                },
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/ao-khoac-",
+                    "category":["outerwear"]
+                },
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/ao-so-mi-",
+                    "category":["shirts"]
+                },
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/ao-thun-",
+                    "category":["tops", "t-shirts"]
+                },
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/ao-thun-polo",
+                    "category":["tops", "polos"]
+                },
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/ao-thun-polo",
+                    "category":["pants"]
+                },
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/quan-jeans-",
+                    "category":["jeans"]
+                },
+                {
+                    "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/quan-shorts",
                     "category":["shorts"]
                 }
             ]
