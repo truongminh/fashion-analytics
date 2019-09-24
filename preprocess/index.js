@@ -14,10 +14,12 @@ async function init() {
 
 async function loadData(opts) {
     ctx = {}
-    docCursor = await opts.rawdb.list(ctx, "ninomax")
-    while (docCursor.hasNext()){
-        cur = await docCursor.next()
-        console.log(cur)
+    brand = 'ninomax'
+    docCursor = await opts.rawdb.list(ctx, brand)
+    while (await docCursor.hasNext()){
+        product = await docCursor.next()
+        //console.log(cur)   
+        ret = await opts.db.upsertProduct({brand, ...product})
     }
 }
 
