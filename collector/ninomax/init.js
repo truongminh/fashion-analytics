@@ -17,5 +17,5 @@ module.exports = [
     'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/ao-thun-polo',
     'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/quan-dai',
     'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/quan-jeans-',
-    'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/quan-shorts'    
+    'http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/quan-shorts'
 ];

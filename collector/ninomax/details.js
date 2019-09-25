@@ -1,9 +1,38 @@
 const Browser = require('../lib/browser');
-const DetailPage = Symbol('detail_page');
 
-async function Details(ctx, url) {
-    ctx[DetailPage] = ctx[DetailPage] || await Browser.NewPage();
-    const page = ctx[DetailPage];
+function PriceToNumber(price) {
+    const n = price.split('').filter(v => !isNaN(v)).join('');
+    return +n;
+}
+
+async function* Details({ saver, brand, time_key, tracking }, it) {
+    const page = await Browser.NewPage();
+    for await (let v of it) {
+        try {
+            const { parent_url, product_url } = v;
+            const existed = await saver.existed({ brand, time_key, product_url });
+            if (existed) {
+                console.log(`[WARNING] encounter existing product ${product_url} in ${parent_url}`);
+                continue;
+            }
+            const track = tracking.start('crawler', { brand, time_key, product_url });
+            const data = await DetailOne(page, product_url);
+            track.end();
+            data.product_url = product_url;
+            data.parent_url = parent_url;
+            data.price = PriceToNumber(data.product_price);
+            data.currency = 'dong';
+            yield data;
+        } catch (e) {
+            console.log(e.stack || e);
+        }
+    }
+    await page._close();
+}
+
+module.exports = Details;
+
+async function DetailOne(page, url) {
     async function getTextContent(selector) {
         const el = await page.$(selector);
         if (!el) {
@@ -38,4 +67,3 @@ async function Details(ctx, url) {
     return data;
 }
 
-module.exports = Details;

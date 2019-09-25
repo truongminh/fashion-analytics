@@ -6,7 +6,7 @@ const NewPage = async () => {
     const page = await browser.newPage();
     await page.setUserAgent(USER_AGENT);
     await page.setRequestInterception(true);
-    const abort_types = ['image'];
+    const abort_types = ['image', 'font'];
     page.on('request', (req) => {
         const resourceType = req.resourceType();
         if (abort_types.indexOf(resourceType) !== -1) {
@@ -25,8 +25,8 @@ const NewPage = async () => {
             req.abort();
             return;
         }
-        if (['script', 'stylesheet'].indexOf(resourceType) !== -1) {
-            console.log('> ', url, resourceType);
+        if (['script', 'stylesheet'].indexOf(resourceType) === -1) {
+            console.log('> ', resourceType, url);
         }
         req.continue();
     });
