@@ -1,36 +1,27 @@
 const Browser = require('../lib/browser');
+const { Sleep } = require('../lib/flow');
 
-const sleep = (t = 1000) => new Promise((r) => setTimeout(r, t));
-
-async function* ListingMany(ctx, urls) {
+async function* Listing(ctx, it) {
+    const { tracking, brand, time_key } = ctx;
     const page = await Browser.NewPage();
-    const detail_urls = [];
-    let done = false;
-    (async () => {
-        for (let parent_url of urls) {
-            try {
-                const it = ListingOne(ctx, page, parent_url);
-                for await (const detail_url of it) {
-                    detail_urls.push({ detail_url, parent_url });
-                }
-            } catch (e) {
-                console.log(e.stack || e);
+    try {
+        for await (const parent_url of it) {
+            const track = tracking.start('crawler', { brand, time_key, url: parent_url });
+            for await (const product_url of ListingOne(page, parent_url)) {
+                yield { parent_url, product_url };
             }
+            track.end();
         }
-        done = true;
-    })();
-    while (!done) {
-        while (detail_urls.length) {
-            yield detail_urls.pop();
-        }
-        await sleep(1000);
+    } finally {
+        await page._close();
     }
-    await page._close();
 }
 
-async function* ListingOne(ctx, page, url) {
+module.exports = Listing;
+
+async function* ListingOne(page, url) {
     // increase max delay on slow network
-    const max_delay = 10000;
+    const max_delay = 30000;
     const delay = 100;
     const itemSelector = '#category-product.main-content-area .productListItem';
     console.log('listing', url);
@@ -39,6 +30,7 @@ async function* ListingOne(ctx, page, url) {
     await page.waitForSelector(itemSelector);
     let lastItems = [];
     let unchanged = 0;
+    // http://www.ninomaxx.com.vn/category-product/filter
     while (true) {
         const items = await page.$$(itemSelector);
         if (items.length > lastItems.length) {
@@ -67,8 +59,7 @@ async function* ListingOne(ctx, page, url) {
                 behavior: 'smooth', block: 'end', inline: 'end'
             });
         }, `${itemSelector}`);
-        await sleep(delay);
+        await Sleep(delay);
     }
 }
 
-module.exports = ListingMany;
