@@ -10,7 +10,7 @@ async function Connect({ url }) {
     return db;
 };
 
-async function RawDBFactory({RAW_DB_URL}){
+async function RawDBFactory({RAW_DB_URL}) {
     console.log(RAW_DB_URL)
     const db = await Connect({url : RAW_DB_URL});
     console.log("Connected to mongodb");
@@ -38,7 +38,9 @@ async function DBFactory({ DB_URL }) {
     }
     
     const upsertProduct = async({brand, ...params}) => {
+        
         const col = db.collection(colName)
+        
         let data = {
             description : params.product_description,
             name : params.product_name,
@@ -49,6 +51,7 @@ async function DBFactory({ DB_URL }) {
             last_update_date : params.time_key,
             last_price : params.product_price,
         }
+
         const query = {brand: brand, product_url : params.product_url};
         return col.updateOne(query, {$set : data}, {upsert : true});
     };
