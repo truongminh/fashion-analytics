@@ -1,29 +1,14 @@
 
-async function SaverFactory(opts) {
-    const arr = [];
-    const get = async (ctx, brand, time_key, product_url) => {
-        return arr.find(a => {
-            return a.time_key === time_key && a.product_url == product_url;
-        });
-    }
-    const upsert = async (ctx, brand, time_key, product_url, row) => {
-        const current = await get(ctx, time_key, product_url);
-        const data = { ...row, time_key, product_url };
-        if (current) {
-            Object.assign(curremt, data);
-        } else {
-            arr.push(data);
+async function TrackingFactory({ DB_URL }) {
+    const start = (group, metadata) => {
+        const end = () => {
         }
-    };
-    return {
-        name: 'console',
-        collection,
-        existed: get,
-        upsert
+        return { end };
     }
+    return { start };
 }
 
 
 module.exports = {
-    SaverFactory
+    TrackingFactory
 }

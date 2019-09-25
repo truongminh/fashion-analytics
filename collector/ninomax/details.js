@@ -15,7 +15,7 @@ async function* Details({ saver, brand, time_key, tracking }, it) {
                 console.log(`[WARNING] encounter existing product ${product_url} in ${parent_url}`);
                 continue;
             }
-            const track = tracking.start('crawler', { brand, time_key, product_url });
+            const track = tracking.start('crawler', { brand, time_key, url: product_url });
             const data = await DetailOne(page, product_url);
             track.end();
             data.product_url = product_url;

@@ -17,4 +17,6 @@ async function main() {
     await worker(opts);
 }
 
-main().catch(e => console.log(e.stack || e));
+// rejected promise
+process.on('unhandledRejection', e => console.log(e.stack || e));
+main();

@@ -23,11 +23,11 @@ async function SaverFactory({ DB_URL }) {
     }
     const storeValue = async (metadata, value) => {
         const key = sha1(value);
-        const existed = await kvStore.countDocuments({ key });
+        const existed = await kvStore.countDocuments({ _id: key });
         if (existed) {
             return key;
         }
-        await kvStore.insertOne({ metadata, value, key });
+        await kvStore.insertOne({ metadata, value, _id: key });
         return key;
     }
     const upsert = async ({ brand, time_key, product }) => {
