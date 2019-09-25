@@ -42,14 +42,16 @@ async function loadData(opts) {
     docCursor = await opts.rawdb.list(ctx, brand)
     while (await docCursor.hasNext()){
         product = await docCursor.next()
-        ret = await opts.db.upsertProduct({brand, ...product})
-        tags = urlTagsMap[product.parent_url]
-        if (!tags){
-            console.log(product.parent_url + " is not tagged yet")
+        info = urlTagsMap[product.parent_url]
+        if (info){
+            //set tags and groups to product
+            product.tags = info.category
+            product.group = info.group
+            ret = await opts.db.upsertProduct({brand, ...product})
+        }else{
+            console.log("something unexpected: " + product.parent_url + " is not tagged yet")
         }
     }
-
-    //map url to category
 }
 
 async function main() {

@@ -50,6 +50,8 @@ async function DBFactory({ DB_URL }) {
             currency : params.currency,
             last_update_date : params.time_key,
             last_price : params.product_price,
+            tags : params.tags,
+            group : params.group
         }
 
         const query = {brand: brand, product_url : params.product_url};
