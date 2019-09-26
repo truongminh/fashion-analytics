@@ -3,9 +3,15 @@
     "categories" : 
     [
         {
+            "name_eng" : "knitwear",
+            "sample_url" : "https://www2.hm.com/en_us/women/products/knit.html",
+            "categories" : ["sweaters", "cardigans", "turtlenecks"]
+        },
+        
+        {
             "name_eng" : "hoodies-and-sweatshirts",
             "sample_url": "https://www2.hm.com/en_us/men/products/hoodies-sweatshirts.html",
-            "categories": []
+            "categories": ["hoodies", "sweatshirts"]
         },
         {
             "name_eng" : "tops",

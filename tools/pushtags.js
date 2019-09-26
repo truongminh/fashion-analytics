@@ -19,12 +19,17 @@ async function pushTags(col, categoryPath){
     for(cat of cats){
         catChildren = cat.categories
         //push parent as a category with null path
-        const ret = await col.findOneAndUpdate({name_eng:cat.name_eng, group:grpName}, 
-            {$set:{parent:"", group:grpName}}, {returnOriginal:false, upsert:true})
+        catData = {name:cat.name_eng, parent:"", group:grpName}
+        console.log(catData.name, catData.parent, catData.group)
+        const ret = await col.findOneAndUpdate(catData, {$set : catData}, 
+                {returnOriginal:false, upsert:true})
+
         parentName = cat.name_eng
         for (child of catChildren){
-            const ret = await  col.findOneAndUpdate({name_eng:child, group:grpName}, 
-                {$set:{parent:parentName, group:grpName}}, {returnOriginal:false, upsert:true})
+            catData = {name:child, parent:parentName, group:grpName}
+            console.log(catData.name, catData.parent, catData.group)
+            const ret = await  col.findOneAndUpdate(catData, {$set : catData}, 
+                {returnOriginal:false, upsert:true})
         }
     }
 }
@@ -35,8 +40,10 @@ async function main(){
     col = db.collection('category')
     paths = ['../meta_data/category_men.json', '../meta_data/category_women.json']
     for (path of paths){
-        pushTags(col, path)
+        await pushTags(col, path)
     }
+    
+    console.log("done")
 }
 
 main()

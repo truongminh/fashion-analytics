@@ -1,5 +1,5 @@
 {
-    "brand": "canifa" ,
+    "brand": "theblues" ,
     "groups" : [
         {
             "group":"women",
@@ -14,7 +14,7 @@
                 },
                 {
                     "url" : "https://theblues.com.vn/en/product-category/women-fashion/ao-thun-thoi-trang-nu/",
-                    "category" : ["tops/t-shirts"]
+                    "category" : ["t-shirts/tops"]
                 },
                 {
                     "url" : "https://theblues.com.vn/en/product-category/women-fashion/dam/",
@@ -44,7 +44,7 @@
                 },
                 {
                     "url" : "https://theblues.com.vn/en/product-category/men-fashion/ao-thun/",
-                    "category" : ["tops/t-shirts"]
+                    "category" : ["t-shirts/tops"]
                 },
                 {
                     "url" : "https://theblues.com.vn/en/product-category/men-fashion/quan-jeans/",

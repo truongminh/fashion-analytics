@@ -1,5 +1,5 @@
 {
-    "brand": "canifa" ,
+    "brand": "evadeeva" ,
     "groups" : [
         {
             "group":"women",
@@ -34,23 +34,23 @@
                 },
                 {
                     "url" : "https://evadeeva.com.vn/collections/tui-xach",
-                    "category" : ["accessories.bags"]
+                    "category" : ["bags/accessories"]
                 },
                 {
                     "url" : "https://evadeeva.com.vn/collections/vong-co",
-                    "category" : ["accessories.jewelry"]
+                    "category" : ["jewelry/accessories"]
                 },
                 {
                     "url" : "https://evadeeva.com.vn/collections/bong-tai",
-                    "category" : ["accessories.jewelry"]
+                    "category" : [ "jewelry/accessories"]
                 },
                 {
                     "url" : "https://evadeeva.com.vn/collections/that-lung",
-                    "category" : ["accessories.belts"]
+                    "category" : [ "belts/accessories"]
                 },
                 {
                     "url" : "https://evadeeva.com.vn/collections/khan",
-                    "category" : ["accessories.scarves"]
+                    "category" : [ "scarves/accessories"]
                 }
             ]
         }
