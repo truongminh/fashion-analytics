@@ -1,50 +1,50 @@
 # Men and women
-https://canifa.com
-http://www.ninomaxx.com.vn
-https://theblues.com.vn/en/
-https://nemshop.vn/
-https://chicland.vn/
-http://shop.sevenam.vn/
-https://www.kkfashion.vn/vay-dam-cong-so
-https://ivymoda.com/
-https://evadeeva.com.vn/
-https://elise.vn/
-https://hnossfashion.com/
-https://kilomet109.com/
-http://www.nosbyn.com/#/home
-https://thebluetshirt.com/
-https://www.cocosin.com/en/
-https://wephobia.com/vi/
-https://www.magonn.com/
-https://www.xeoxo.com/
-https://lanejt.asia
-http://cosette.vn/
-https://hacuc.com/
-http://www.thegemconcept.com/
-https://popbirdy.vn/
-https://marc.com.vn
-https://poxi.vn
-https://hnossfashion.com
-https://www.subtle-studios.com/
-https://candeblanc.vn/
-http://www.renbytee.net/
-https://cocosin.com/
-https://dottie.com.vn/
-https://gumac.vn/
-https://thoitrangpolly.com/
-https://onways.vn/
-https://www.jimmay.vn/
-https://cardino.com.vn/
-https://yody.vn
+- https://canifa.com
+- http://www.ninomaxx.com.vn
+- https://theblues.com.vn/en/
+- https://nemshop.vn/
+- https://chicland.vn/
+- http://shop.sevenam.vn/
+- https://www.kkfashion.vn/vay-dam-cong-so
+- https://ivymoda.com/
+- https://evadeeva.com.vn/
+- https://elise.vn/
+- https://hnossfashion.com/
+- https://kilomet109.com/
+- http://www.nosbyn.com/#/home
+- https://thebluetshirt.com/
+- https://www.cocosin.com/en/
+- https://wephobia.com/vi/
+- https://www.magonn.com/
+- https://www.xeoxo.com/
+- https://lanejt.asia
+- http://cosette.vn/
+- https://hacuc.com/
+- http://www.thegemconcept.com/
+- https://popbirdy.vn/
+- https://marc.com.vn
+- https://poxi.vn
+- https://hnossfashion.com
+- https://www.subtle-studios.com/
+- https://candeblanc.vn/
+- http://www.renbytee.net/
+- https://cocosin.com/
+- https://dottie.com.vn/
+- https://gumac.vn/
+- https://thoitrangpolly.com/
+- https://onways.vn/
+- https://www.jimmay.vn/
+- https://cardino.com.vn/
+- https://yody.vn
 
 # Men
-http://top4man.vn/
-https://4menshop.com/
-https://www.anphuoc.com.vn/
-https://www.viettien.com.vn/
-https://biluxury.vn/
-http://www.novelty.com.vn/
-https://may10.vn
-https://aristino.com
-https://routine.vn/
-https://venesto.vn/
+- http://top4man.vn/
+- https://4menshop.com/
+- https://www.anphuoc.com.vn/
+- https://www.viettien.com.vn/
+- https://biluxury.vn/
+- http://www.novelty.com.vn/
+- https://may10.vn
+- https://aristino.com
+- https://routine.vn/
+- https://venesto.vn/
