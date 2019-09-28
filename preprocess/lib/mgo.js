@@ -29,7 +29,8 @@ async function RawDBFactory({RAW_DB_URL}) {
 
 async function DBFactory({ DB_URL }) {
     const db = await Connect({ url: DB_URL });
-    const colName = 'products'
+    const colProducts = 'products'
+    const colListing = 'listingurl'
 
     const existed = async (ctx, { brand, time_key, product_url }) => {
         const col = db.collection(brand);
@@ -37,24 +38,14 @@ async function DBFactory({ DB_URL }) {
         return count > 0;
     }
     
-    const upsertProduct = async({brand, ...params}) => {
-        
-        const col = db.collection(colName)
-        
-        let data = {
-            description : params.product_description,
-            name : params.product_name,
-            number : params.product_number,
-            url : params.product_url,
-            parent_url : params.parent_url,
-            currency : params.currency,
-            last_update_date : params.time_key,
-            last_price : params.product_price,
-            tags : params.tags,
-            group : params.group
-        }
+    const findTags = async(url) => {
+        const col = db.collection(colListing)
+        const tags = col.findOne({url:url})
+        return tags
+    }
 
-        const query = {brand: brand, product_url : params.product_url};
+    const upsertProduct = async(query, data) => {
+        const col = db.collection(colProducts)
         return col.updateOne(query, {$set : data}, {upsert : true});
     };
 
@@ -62,7 +53,8 @@ async function DBFactory({ DB_URL }) {
     return {
         name: 'mongodb',
         existed,
-        upsertProduct
+        upsertProduct,
+        findTags
     }
 }
 

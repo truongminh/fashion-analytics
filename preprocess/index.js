@@ -14,40 +14,36 @@ async function init() {
     return opts;
 }
 
-async function loadUrlTagsMap(brand){
-    try{
-        const path = "../meta_data/url_"+brand+".json"
-        let content = fs.readFileSync(path)
-        let data = JSON.parse(content)
-        assert.equal(brand, data.brand)
-        let map = {}
-        for (grp of data.groups){
-            for (url of grp.urls){
-                map[url.url] = {category : url.category, group : grp.group}
-            }
-        }
-        return map
-    } catch (err) {
-        console.log(err)
-        return {}
-    }
-}
-
 async function loadData(opts) {
     ctx = {}
     brand = 'ninomax'
     
-    const urlTagsMap = await loadUrlTagsMap(brand);
-
     docCursor = await opts.rawdb.list(ctx, brand)
     while (await docCursor.hasNext()){
         product = await docCursor.next()
-        info = urlTagsMap[product.parent_url]
-        if (info){
+        
+        //find the corresponding category tags from the listing url
+        urldoc = await opts.db.findTags(product.parent_url)
+        if (urldoc){
+            //console.log(urldoc)
             //set tags and groups to product
-            product.tags = info.category
-            product.group = info.group
-            ret = await opts.db.upsertProduct({brand, ...product})
+            //product.tagids = urldoc.tagids
+            //product.group = urldoc.group
+            let data = {
+                desc : product.product_description,
+                name : product.product_name,
+                number : product.product_number,
+                par_url : product.parent_url,
+                currency : product.currency,
+                last_crawle_date : product.time_key,
+                last_price : product.product_price,
+                cattagids : urldoc.cattagids,
+                group : urldoc.group
+            }
+    
+            const query = {brand: brand, url : product.product_url};
+
+            ret = await opts.db.upsertProduct(query, data)
         }else{
             console.log("something unexpected: " + product.parent_url + " is not tagged yet")
         }

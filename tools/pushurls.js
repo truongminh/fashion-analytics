@@ -55,8 +55,8 @@ async function pushUrls(db, path){
             }else{
                 query = {url:url.url}
                 //TODO: category reference to "pure category" for the sake of clearance now
-                data = {url:url.url, brand:brandName, group:groupName, category:url.category}
-                colUrl.findOneAndUpdate(query, {$set : data}, {upsert:true})
+                data = {url:url.url, brand:brandName, group:groupName, cattags:url.category, cattagids: catIds}
+                await colUrl.findOneAndUpdate(query, {$set : data}, {upsert:true})
             }
         }
     }
