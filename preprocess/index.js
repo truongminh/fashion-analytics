@@ -14,9 +14,8 @@ async function init() {
     return opts;
 }
 
-async function loadData(opts) {
+async function pushProducts(opts, brand) {
     ctx = {}
-    brand = 'ninomax'
     
     docCursor = await opts.rawdb.list(ctx, brand)
     while (await docCursor.hasNext()){
@@ -50,10 +49,25 @@ async function loadData(opts) {
     }
 }
 
+async function brandAssortment(opts, group, brand) {
+    catCursor = await opts.db.listCategories({})
+    while( await catCursor.hasNext()){
+        cat = await catCursor.next()
+        const count = await opts.db.countProduct({brand:brand, group:group, cattagids:cat._id})
+        if (count > 0){
+            console.log('category ', cat._id, " has count:  ", count)
+        }
+    }
+    console.log('done')
+}
+
 async function main() {
     const opts = await init();
     //console.log(opts)
-    await loadData(opts)
+    brand = 'ninomax'    
+    group = 'women'
+    //await pushProducts(opts, brand)
+    await brandAssortment(opts, group, brand)
 }
 
 main().catch(e => console.log(e.stack || e));

@@ -31,6 +31,7 @@ async function DBFactory({ DB_URL }) {
     const db = await Connect({ url: DB_URL });
     const colProducts = 'products'
     const colListing = 'listingurl'
+    const colCategory = 'category'
 
     const existed = async (ctx, { brand, time_key, product_url }) => {
         const col = db.collection(brand);
@@ -38,6 +39,16 @@ async function DBFactory({ DB_URL }) {
         return count > 0;
     }
     
+    const countProduct = async(query) => {
+        col = db.collection(colProducts)
+        return col.countDocuments(query)
+    }
+
+    const listCategories = async(query) => {
+        const col = db.collection(colCategory)
+        return col.find(query)
+    }
+
     const findTags = async(url) => {
         const col = db.collection(colListing)
         const tags = col.findOne({url:url})
@@ -54,7 +65,9 @@ async function DBFactory({ DB_URL }) {
         name: 'mongodb',
         existed,
         upsertProduct,
-        findTags
+        findTags,
+        listCategories,
+        countProduct
     }
 }
 
