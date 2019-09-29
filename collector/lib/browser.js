@@ -1,5 +1,26 @@
 const puppeteer = require('puppeteer');
 
+const blocklist = [
+
+    // ninomax
+    'facebook.com',
+    'facebook.net',
+    'gstatic.com',
+    'googletagmanager.com',
+    'addthis.com',
+    'mngbcn.com',
+    'addthisedge.com',
+
+    // ivymoda
+    'caresoft.vn'
+
+];
+
+function ShouldBlock(url) {
+    return blocklist.some(s => url.indexOf(s) !== -1);
+}
+
+
 const NewPage = async () => {
     const USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3239.108 Safari/537.36';
     const browser = await puppeteer.launch({});
@@ -14,14 +35,7 @@ const NewPage = async () => {
             return;
         }
         const url = req.url();
-        if (
-            url.includes('facebook.com') ||
-            url.includes('facebook.net') ||
-            url.includes('gstatic.com') ||
-            url.includes('googletagmanager.com') ||
-            url.includes('addthis.com') ||
-            url.includes('mngbcn.com') ||
-            url.includes('addthisedge.com')) {
+        if (ShouldBlock(url)) {
             req.abort();
             return;
         }
