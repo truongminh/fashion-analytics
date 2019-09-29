@@ -40,6 +40,15 @@
 - http://heradg.com.vn
 - https://thoitranght.com.vn
 - https://www.maisononline.vn
+- https://huongboutique.vn
+- https://www.emspo.com.vn
+- http://pantio.vn
+- https://shop.paltal.vn
+- https://vincy.com.vn
+- https://www.jubbievn.com
+- https://sunfly.com.vn/
+- http://www.gwens.com.vn/
+
 # Men
 - https://adamstorevn.com
 - http://top4man.vn/
