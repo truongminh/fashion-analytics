@@ -15,9 +15,13 @@ async function init() {
 }
 
 async function main() {
-    const opts = await init();
-    const dir = 'ivymoda';
+    const dir = process.argv[2];
+    if (!dir) {
+        console.log('USAGE: node index.js [ninomax|ivymoda]');
+        process.exit(0);
+    }
     const worker = require(path.join(__dirname, dir));
+    const opts = await init();
     await worker(opts);
 }
 
