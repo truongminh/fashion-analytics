@@ -1,0 +1,112 @@
+{
+    "brand" : "ivymoda",
+    "groups" : [
+        {
+            "group" : "women",
+            "urls" : [
+                {
+                    "url" : "https://ivymoda.com/danh-muc/ao-so-mi-nu",
+                    "category": ["shirts-and-blouses", "shirts/shirts-and-blouses"]
+                },
+                {
+                    "url" : "https://ivymoda.com/danh-muc/ao-thun-nu",
+                    "category": ["t-shirts/tops"]
+                },
+                {
+                    "url" : "https://ivymoda.com/danh-muc/ao-vest-nu",
+                    "category": ["blazers"]
+                },
+                {
+                    "url" : "https://ivymoda.com/danh-muc/ao-len-nu",
+                    "category": ["knitwear"]
+                },
+                {
+                    "url" : "https://ivymoda.com/danh-muc/ao-khoac-nu",
+                    "category": ["outerwear"]
+                },
+                {
+                    "url" : "https://ivymoda.com/danh-muc/quan-jean-nu",
+                    "category": ["jeans"]
+                },
+                {
+                    "url" : "https://ivymoda.com/danh-muc/quan-lung-short-nu",
+                    "category": ["shorts"]
+                },
+                {
+                    "url" : "https://ivymoda.com/danh-muc/quan-dai-nu",
+                    "category": ["pants"]
+                },
+                {
+                    "url" : "https://ivymoda.com/danh-muc/dam",
+                    "category": ["dresses"]
+                },
+                {
+                    "url" : "https://ivymoda.com/danh-muc/dam-thun-nu",
+                    "category": ["dresses"]
+                },
+                {
+                    "url":"https://ivymoda.com/danh-muc/senora-nu",
+                    "category" : ["dresses"]
+                },
+                {
+                    "url":"https://ivymoda.com/danh-muc/jumpsuit",
+                    "category" : ["jumpsuits-and-rompers"]
+                },
+                {
+                    "url":"https://ivymoda.com/danh-muc/zuyp",
+                    "category" : ["skirts"]
+                },
+                {
+                    "url":"https://ivymoda.com/danh-muc/do-lot-nu",
+                    "category" : ["lingerie"]
+                },
+                {
+                    "url":"https://ivymoda.com/danh-muc/giay-nu",
+                    "category" : ["shoes"]
+                }
+            ]
+        },
+
+        {
+            "group" : "men",
+            "urls": [
+                {
+                    "url":"https://ivymoda.com/danh-muc/ao-so-mi-nam",
+                    "category": ["shirts"]
+                },
+                {
+                    "url":"https://ivymoda.com/danh-muc/ao-thun-nam",
+                    "category": ["t-shirts/tops"]
+                },
+                {
+                    "url":"https://ivymoda.com/danh-muc/ao-vest-nam",
+                    "category": ["blazers-and-suits"]
+                },
+                {
+                    "url":"https://ivymoda.com/danh-muc/ao-len-nam",
+                    "category": ["knitwear"]
+                },
+                {
+                    "url":"https://ivymoda.com/danh-muc/quan-jean-nam",
+                    "category": ["jeans"]
+                },
+                {
+                    "url":"https://ivymoda.com/danh-muc/quan-lung-nam",
+                    "category": ["shorts"]
+                },
+                {
+                    "url":"https://ivymoda.com/danh-muc/quan-dai-nam",
+                    "category": ["pants"]
+                },
+                {
+                    "url":"https://ivymoda.com/danh-muc/giay-nam",
+                    "category": ["shoes"]
+                },
+                {
+                    "url":"https://ivymoda.com/danh-muc/phu-kien-nam",
+                    "category": ["accessories"]
+                }
+            ]
+        }
+    ]
+}
