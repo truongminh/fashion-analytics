@@ -6,15 +6,15 @@
             "urls" : [
                 {
                     "url" : "https://ivymoda.com/danh-muc/ao-so-mi-nu",
-                    "category": ["shirts-and-blouses", "shirts/shirts-and-blouses"]
+                    "category": ["shirts-and-blouses/shirts"]
                 },
                 {
                     "url" : "https://ivymoda.com/danh-muc/ao-thun-nu",
-                    "category": ["t-shirts/tops"]
+                    "category": ["tops/t-shirts"]
                 },
                 {
                     "url" : "https://ivymoda.com/danh-muc/ao-vest-nu",
-                    "category": ["blazers"]
+                    "category": ["blazers-and-suits/blazers"]
                 },
                 {
                     "url" : "https://ivymoda.com/danh-muc/ao-len-nu",
@@ -58,7 +58,7 @@
                 },
                 {
                     "url":"https://ivymoda.com/danh-muc/do-lot-nu",
-                    "category" : ["lingerie"]
+                    "category" : ["underwear"]
                 },
                 {
                     "url":"https://ivymoda.com/danh-muc/giay-nu",
@@ -76,7 +76,7 @@
                 },
                 {
                     "url":"https://ivymoda.com/danh-muc/ao-thun-nam",
-                    "category": ["t-shirts/tops"]
+                    "category": ["tops/t-shirts"]
                 },
                 {
                     "url":"https://ivymoda.com/danh-muc/ao-vest-nam",

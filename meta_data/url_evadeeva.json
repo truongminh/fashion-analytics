@@ -26,7 +26,7 @@
                 },
                 {
                     "url" : "https://evadeeva.com.vn/collections/ao-khoac",
-                    "category" : ["blazers"]
+                    "category" : ["blazers-and-suits/blazers"]
                 },
                 {
                     "url" :"https://evadeeva.com.vn/collections/giay",
@@ -34,23 +34,23 @@
                 },
                 {
                     "url" : "https://evadeeva.com.vn/collections/tui-xach",
-                    "category" : ["bags/accessories"]
+                    "category" : ["accessories/bags"]
                 },
                 {
                     "url" : "https://evadeeva.com.vn/collections/vong-co",
-                    "category" : ["jewelry/accessories"]
+                    "category" : ["accessories/jewelry"]
                 },
                 {
                     "url" : "https://evadeeva.com.vn/collections/bong-tai",
-                    "category" : [ "jewelry/accessories"]
+                    "category" : [ "accessories/jewelry"]
                 },
                 {
                     "url" : "https://evadeeva.com.vn/collections/that-lung",
-                    "category" : [ "belts/accessories"]
+                    "category" : [ "accessories/belts"]
                 },
                 {
                     "url" : "https://evadeeva.com.vn/collections/khan",
-                    "category" : [ "scarves/accessories"]
+                    "category" : [ "accessories/scarves"]
                 }
             ]
         }
