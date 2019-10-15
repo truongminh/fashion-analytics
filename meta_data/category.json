@@ -1,6 +1,4 @@
 { 
-    "group" : "women",
-
     "categories": [
         {
             "name_eng": "dresses",
@@ -22,29 +20,24 @@
                 "sleeveless", "short-sleeves", 
                 "long-sleeves", "sportswear-tops", 
                 "cropped-tops", "basics", 
-                "bodysuits","t-shirts", "polos"]
+                "bodysuits","t-shirts", "polos", "tanks"]
         },
-
+        
         {
             "name_eng" : "shirts-and-blouses",
             "sample_url" : "https://www2.hm.com/en_us/women/products/shirts-blouses.html",
             "categories" : [ 
                 "shirts", "blouses", 
                 "tunics", "off-shoulder", 
-                "denim-shirts"]
+                "denim-shirts", "casual-shirts", "dressed-shirts", "short-sleeve-shirts"]
         },
+
         {
-            "name_eng" : "cardigans-and-sweaters",
-            "sample_url" : "https://www2.hm.com/en_us/women/products/cardigans-sweaters.html",
-            "categories": [
-                "cardigans", "sweaters"
-            ]
-        },
-        {
-            "name_eng" : "blazers",
+            "name_eng" : "blazers-and-suits",
             "sample_url" : "https://www2.hm.com/en_us/women/products/blazers-vests.html",
-            "categories" : ["kimonos"]
+            "categories" : ["kimonos", "blazers", "suits", "suit-pants"]
         },
+
         {
             "name_eng" : "pants",
             "sample_url" : "https://www2.hm.com/en_us/women/products/pants.html",
@@ -52,7 +45,7 @@
                 "leggings", "joggers", 
                 "slim", "flare", 
                 "chinos-slacks", 
-                "culottes", "dress-pants"
+                "culottes", "dress-pants", "cargo-pants"
             ]
         },
         
@@ -73,9 +66,10 @@
             "categories" : [ 
                 "jackets", "coats",
                 "parkas", "biker-jackets",
-                "denim-jackets"
+                "denim-jackets", "bomber-jackets", "leather-jacketes", "windbreakers"
             ]
         },
+
         {
             "name_eng" : "hoodies-and-sweatshirts",
             "sample_url" : "https://www2.hm.com/en_us/women/products/hoodies-sweatshirts.html",
@@ -111,7 +105,7 @@
             "name_eng" : "shorts",
             "sample_url" : "https://www2.hm.com/en_us/women/products/shorts.html",
             "categories": [
-                "denim-shorts", "high-waisted-shorts"
+                "jean-shorts","denim-shorts", "high-waisted-shorts", "chino-shorts", "cargo-shorts", "casual-shorts"
             ]
         },
 
@@ -128,12 +122,12 @@
         },
 
         {
-            "name_eng" : "lingerie",
+            "name_eng" : "underwear",
             "sample_url" : "https://www2.hm.com/en_us/women/products/lingerie.html",
             "categories": [
                 "bras", "briefs-and-panties",
                 "bodysuits-corsets", "shaping-lingerie",
-                "accesseries"
+                "accesseries", "pajamas"
             ]
         },
 
@@ -153,7 +147,7 @@
                 "shaping"
             ]
         },
-
+        
         {
             "name_eng" : "sportswear",
             "sample_url" : "https://www2.hm.com/en_us/women/products/workout-clothes.html",
@@ -163,7 +157,7 @@
                 "accessories", "yoga"
             ]
         },
-
+        
         {
             "name_eng" : "maternity-wear",
             "sample_url" : "https://www2.hm.com/en_us/women/products/maternity-clothes.html",
