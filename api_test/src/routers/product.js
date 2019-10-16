@@ -15,7 +15,7 @@ router.get('/products/id/:id', async (req, res) => {
     }
 })
 
-router.get('/products/assort/:brand', async (req, res) => {
+router.get('/products/assort-0/:brand', async (req, res) => {
     try {
         queryCategories =  new Set([
             "outerwear", "underwear", "knitwear",
@@ -23,9 +23,10 @@ router.get('/products/assort/:brand', async (req, res) => {
             "shirts-and-blouses",  "tops/t-shirts", "tops/polos", 
             "dresses", "skirts", "accessories", "shoes"])
 
+        const nDays = 30
         let endDate = new Date()
         let startDate = new Date()
-        startDate.setDate(endDate.getDate() - 30)
+        startDate.setDate(endDate.getDate() - nDays)
 
         categories = await Product.countBrandCategories(req.params.brand, startDate, endDate)
 
@@ -40,5 +41,26 @@ router.get('/products/assort/:brand', async (req, res) => {
     }
 })
 
+router.get('/products/assort-1/:brand', async (req, res) => {
+    try{
+        queryGroups = new Set(["men", "women", "boys", "girls"])
+        
+        const nDays = 30
+        let endDate = new Date()
+        let startDate = new Date()
+        startDate.setDate(endDate.getDate() - nDays)
+        
+        groups = await Product.countBrandGroups(req.params.brand, startDate, endDate)
+        if (!groups){
+            res.status(404).send()
+        }else{
+            retGroups = groups.filter(count => queryGroups.has(count._id))
+            res.send(retGroups)
+        }
+
+    } catch (e) {
+        res.status(500).send()
+    }
+})
 
 module.exports = router

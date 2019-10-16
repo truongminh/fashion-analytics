@@ -104,6 +104,15 @@ productSchema.statics.countBrandCategories = async (brand, startDate, endDate) =
     return aggregate
 }
 
+productSchema.statics.countBrandGroups = async (brand, startDate, endDate) => {
+    const aggregate = await Product.aggregate([
+        { $match : {$and: [{brand : brand}, {last_crawle_date : {$gte:startDate, $lte:endDate}}]}},
+        { $project : {group : 1}},
+        { $group : {_id : "$group", count : {$sum :1}}}
+    ]);
+    return aggregate
+}
+
 const Product = mongoose.model('Product', productSchema, 'products')
 
 module.exports = Product
