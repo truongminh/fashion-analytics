@@ -15,15 +15,26 @@ router.get('/products/id/:id', async (req, res) => {
     }
 })
 
-router.get('/products/test/:brand', async (req, res) => {
+router.get('/products/assort/:brand', async (req, res) => {
     try {
-        console.log(req.params)
-        const prod = await Product.findRecentProducts(req.params.brand)
+        queryCategories =  new Set([
+            "outerwear", "underwear", "knitwear",
+            "sweaters-and-cardigans", "jeans", "pants", "shorts",
+            "shirts-and-blouses",  "tops/t-shirts", "tops/polos", 
+            "dresses", "skirts", "accessories", "shoes"])
 
-        if (!prod) {
+        let endDate = new Date()
+        let startDate = new Date()
+        startDate.setDate(endDate.getDate() - 30)
+
+        categories = await Product.countBrandCategories(req.params.brand, startDate, endDate)
+
+        if (!categories) {
             res.status(404).send()
+        }else{
+            retCategories = categories.filter(count => queryCategories.has(count._id) )
+            res.send(retCategories)
         }
-        res.send(prod)
     } catch (e) {
         res.status(500).send()
     }

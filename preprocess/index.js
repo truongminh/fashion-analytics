@@ -32,7 +32,7 @@ async function pushProducts(opts, brand) {
                 number : product.product_number,
                 parent_url : product.parent_url,
                 currency : product.currency,
-                last_crawle_date : product.time_key,
+                last_crawle_date : new Date(product.time_key),
                 last_price : product.product_price,
                 categories : urldoc.categories,
                 group : urldoc.group
