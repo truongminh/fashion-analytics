@@ -1,6 +1,7 @@
 const fs = require('fs')
 const assert = require('assert')
 const {RawDBFactory, DBFactory} = require('./lib/mgo');
+const { sha1 } = require('object-hash');
 
 async function init() {
     const {DB_URL, RAW_DB_URL} = require('./config');
@@ -24,25 +25,23 @@ async function pushProducts(opts, brand) {
         //find the corresponding category tags from the listing url
         urldoc = await opts.db.findTags(product.parent_url)
         if (urldoc){
-            //console.log(urldoc)
-            //set tags and groups to product
-            //product.tagids = urldoc.tagids
-            //product.group = urldoc.group
             let data = {
-                desc : product.product_description,
+                _id : sha1(product.product_url),
+                description : product.product_description,
                 name : product.product_name,
                 number : product.product_number,
-                par_url : product.parent_url,
+                parent_url : product.parent_url,
                 currency : product.currency,
                 last_crawle_date : product.time_key,
                 last_price : product.product_price,
-                cattagids : urldoc.cattagids,
+                categories : urldoc.categories,
                 group : urldoc.group
             }
     
             const query = {brand: brand, url : product.product_url};
 
             ret = await opts.db.upsertProduct(query, data)
+
         }else{
             console.log("something unexpected: " + product.parent_url + " is not tagged yet")
         }
@@ -66,8 +65,8 @@ async function main() {
     //console.log(opts)
     brand = 'ninomax'    
     group = 'women'
-    //await pushProducts(opts, brand)
-    await brandAssortment(opts, group, brand)
+    await pushProducts(opts, brand)
+    //await brandAssortment(opts, group, brand)
 }
 
 main().catch(e => console.log(e.stack || e));
