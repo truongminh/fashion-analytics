@@ -30,8 +30,8 @@ async function RawDBFactory({RAW_DB_URL}) {
 async function DBFactory({ DB_URL }) {
     const db = await Connect({ url: DB_URL });
     const colProducts = 'products'
-    const colListing = 'listingurl'
-    const colCategory = 'category'
+    const colListing = 'listing_urls'
+    const colCategory = 'categories'
     const colPrice = 'product_prices'
 
     const existed = async (ctx, { brand, time_key, product_url }) => {

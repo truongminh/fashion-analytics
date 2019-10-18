@@ -48,7 +48,7 @@ async function pushUrls(db, path){
     brandName = data.brand
     groups = data.groups
 
-    colUrl = db.collection('listingurl')
+    colUrl = db.collection('listing_urls')
     for (group of groups){
         groupName = group.group
         for (url of group.urls){

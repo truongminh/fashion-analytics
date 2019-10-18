@@ -30,7 +30,7 @@ async function pushTags(col, categoryPath){
 async function main(){
     const URL = "mongodb+srv://app:wl6KKUAzfEDvmSxn@dev-f8alc.mongodb.net/fashion?retryWrites=true&w=majority";
     db = await Connect({url:URL})
-    col = db.collection('category')
+    col = db.collection('categories')
     paths = ['../meta_data/category.json']
     for (path of paths){
         await pushTags(col, path)
