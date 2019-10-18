@@ -32,6 +32,7 @@ async function DBFactory({ DB_URL }) {
     const colProducts = 'products'
     const colListing = 'listingurl'
     const colCategory = 'category'
+    const colPrice = 'product_prices'
 
     const existed = async (ctx, { brand, time_key, product_url }) => {
         const col = db.collection(brand);
@@ -42,6 +43,11 @@ async function DBFactory({ DB_URL }) {
     const countProduct = async(query) => {
         col = db.collection(colProducts)
         return col.countDocuments(query)
+    }
+
+    const findOneProduct = async(query) => {
+        col = db.collection(colProducts)
+        return col.findOne(query)
     }
 
     const listCategories = async(query) => {
@@ -55,19 +61,25 @@ async function DBFactory({ DB_URL }) {
         return tags
     }
 
-    const upsertProduct = async(query, data) => {
+    const updateProduct = async(query, data) => {
         const col = db.collection(colProducts)
-        return col.updateOne(query, {$set : data}, {upsert : true});
+        return col.findOneAndUpdate(query, {$set : data}, {upsert : true, returnNewDocument:false});
     };
 
+    const insertOnePriceRecord = async(data) => {
+        const col = db.collection(colPrice)
+        return col.insertOne(data)
+    }
 
     return {
         name: 'mongodb',
         existed,
-        upsertProduct,
+        updateProduct,
         findTags,
+        findOneProduct,
         listCategories,
-        countProduct
+        countProduct,
+        insertOnePriceRecord,
     }
 }
 
