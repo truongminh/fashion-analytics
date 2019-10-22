@@ -16,29 +16,22 @@ async function pushTags(col, categoryPath){
     data = JSON.parse(fs.readFileSync(categoryPath))
     grpName = data.group
     cats = data.categories
+    let cnt = 0
     for(cat of cats){
         catChildren = cat.categories
-        //push parent as a category with null path
-        catData = {name:cat.name_eng, parent:"", group:grpName}
-        console.log(catData.name, catData.parent, catData.group)
-        const ret = await col.findOneAndUpdate(catData, {$set : catData}, 
+        catData = {_id : cnt, name:cat.name_eng, children: catChildren}
+        console.log(catData)
+        const ret = await col.findOneAndUpdate({name : catData.name_eng}, {$set : catData}, 
                 {returnOriginal:false, upsert:true})
-
-        parentName = cat.name_eng
-        for (child of catChildren){
-            catData = {name:child, parent:parentName, group:grpName}
-            console.log(catData.name, catData.parent, catData.group)
-            const ret = await  col.findOneAndUpdate(catData, {$set : catData}, 
-                {returnOriginal:false, upsert:true})
-        }
+        cnt += 1
     }
 }
 
 async function main(){
     const URL = "mongodb+srv://app:wl6KKUAzfEDvmSxn@dev-f8alc.mongodb.net/fashion?retryWrites=true&w=majority";
     db = await Connect({url:URL})
-    col = db.collection('category')
-    paths = ['../meta_data/category_men.json', '../meta_data/category_women.json']
+    col = db.collection('categories')
+    paths = ['../meta_data/category.json']
     for (path of paths){
         await pushTags(col, path)
     }

@@ -1,6 +1,7 @@
 const fs = require('fs')
 const assert = require('assert')
 const {RawDBFactory, DBFactory} = require('./lib/mgo');
+const { sha1 } = require('object-hash');
 
 async function init() {
     const {DB_URL, RAW_DB_URL} = require('./config');
@@ -14,51 +15,72 @@ async function init() {
     return opts;
 }
 
-async function pushProducts(opts, brand) {
-    ctx = {}
-    
-    docCursor = await opts.rawdb.list(ctx, brand)
-    while (await docCursor.hasNext()){
-        product = await docCursor.next()
-        
-        //find the corresponding category tags from the listing url
-        urldoc = await opts.db.findTags(product.parent_url)
-        if (urldoc){
-            //console.log(urldoc)
-            //set tags and groups to product
-            //product.tagids = urldoc.tagids
-            //product.group = urldoc.group
-            let data = {
-                desc : product.product_description,
-                name : product.product_name,
-                number : product.product_number,
-                par_url : product.parent_url,
-                currency : product.currency,
-                last_crawle_date : product.time_key,
-                last_price : product.product_price,
-                cattagids : urldoc.cattagids,
-                group : urldoc.group
-            }
-    
-            const query = {brand: brand, url : product.product_url};
-
-            ret = await opts.db.upsertProduct(query, data)
-        }else{
-            console.log("something unexpected: " + product.parent_url + " is not tagged yet")
-        }
+function isProductPriceChange(oldProduct, curProduct){
+    if (oldProduct.sale != curProduct.sale ||
+        oldProduct.price != curProduct.price ||
+        oldProduct.price_sale != curProduct.price_sale){
+        return true
+    }else{
+        return false
     }
 }
 
-async function brandAssortment(opts, group, brand) {
-    catCursor = await opts.db.listCategories({})
-    while( await catCursor.hasNext()){
-        cat = await catCursor.next()
-        const count = await opts.db.countProduct({brand:brand, group:group, cattagids:cat._id})
-        if (count > 0){
-            console.log('category ', cat._id, " has count:  ", count)
-        }
+function extractPriceRecord(product){
+    priceRecord = {
+        product_id: product._id, 
+        price:product.price, 
+        sale_price:product.price_sale, 
+        on_sale:product.on_sale, 
+        date:new Date(product.last_upate_date)
     }
-    console.log('done')
+    return priceRecord
+}
+
+async function updateProducts(opts, brand) {
+    ctx = {}
+    try {
+        docCursor = await opts.rawdb.list(ctx, brand)
+        while (await docCursor.hasNext()){
+            product = await docCursor.next()
+            //find the corresponding category tags from the listing url
+            urldoc = await opts.db.findTags(product.parent_url)
+            if (urldoc){
+                let finalProduct = {
+                    _id : sha1(product.product_url),
+                    url : product.product_url,
+                    description : product.product_description,
+                    name : product.product_name,
+                    number : product.product_number,
+                    parent_url : product.parent_url,
+                    currency : product.currency,
+                    last_update_date : new Date(product.time_key),
+                    price : product.product_price,
+                    price_sale : product.product_price_sale,
+                    on_sale : product.on_sale,
+                    categories : urldoc.categories,
+                    group : urldoc.group
+                }
+        
+                const query = {url : product.product_url};
+
+                ret = await opts.db.updateProduct(query, finalProduct)
+                //two cases for a new price record
+                //1. we have a new product => new price record
+                //2. product already exists but price changes
+                if ( ret.value === null || 
+                    (ret.value !== null && isProductPriceChange(ret.value, finalProduct))){
+                    //new product
+                    priceRecord = extractPriceRecord(finalProduct)
+                    pret = await opts.db.insertOnePriceRecord(priceRecord)
+                }
+
+            }else{
+                console.log("something unexpected: " + product.parent_url + " is not tagged yet")
+            }
+        }
+    }catch (error){
+        console.log(error)
+    }
 }
 
 async function main() {
@@ -66,8 +88,7 @@ async function main() {
     //console.log(opts)
     brand = 'ninomax'    
     group = 'women'
-    //await pushProducts(opts, brand)
-    await brandAssortment(opts, group, brand)
+    await updateProducts(opts, brand)
 }
 
 main().catch(e => console.log(e.stack || e));

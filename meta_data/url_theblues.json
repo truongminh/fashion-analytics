@@ -14,7 +14,7 @@
                 },
                 {
                     "url" : "https://theblues.com.vn/en/product-category/women-fashion/ao-thun-thoi-trang-nu/",
-                    "category" : ["t-shirts/tops"]
+                    "category" : ["tops/t-shirts"]
                 },
                 {
                     "url" : "https://theblues.com.vn/en/product-category/women-fashion/dam/",
@@ -40,11 +40,11 @@
                 },
                 {
                     "url" : "https://theblues.com.vn/en/product-category/men-fashion/ao-somi/",
-                    "category" : ["shirts"]
+                    "category" : ["shirts-and-blouses/shirts"]
                 },
                 {
                     "url" : "https://theblues.com.vn/en/product-category/men-fashion/ao-thun/",
-                    "category" : ["t-shirts/tops"]
+                    "category" : ["tops/t-shirts"]
                 },
                 {
                     "url" : "https://theblues.com.vn/en/product-category/men-fashion/quan-jeans/",

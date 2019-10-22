@@ -2,6 +2,7 @@ const { MongoClient } = require('mongodb');
 const fs = require('fs')
 const assert = require('assert')
 const path = require('path')
+const { sha1 } = require('object-hash');
 
 async function Connect({ url }) {
     const client = new MongoClient(url, {
@@ -13,49 +14,60 @@ async function Connect({ url }) {
     return db;
 };
 
+async function isValidCategory(db, cat){
+    colCat = db.collection('category')
+    name = cat
+    child = ''
+    if (cat.includes('/')){
+        splits = cat.split('/')
+        if (splits.length > 2){
+            return false
+        }else{
+            name =  splits[0]
+            child = splits[1]
+        }
+    }
+
+    //assert that this category exists
+    ret = await colCat.find({name:name}).toArray()
+    if (ret.length !== 1){
+        return false
+    }else{
+        ret = ret[0]
+        if (child.length !== 0){
+            exist = ret.children.filter(str => str === child)
+            return exist           
+        }else{
+            return true
+        }
+    }
+}
+
 async function pushUrls(db, path){
     data = JSON.parse(fs.readFileSync(path))
     brandName = data.brand
     groups = data.groups
 
-    colCat = db.collection('category')
-    colUrl = db.collection('listingurl')
+    colUrl = db.collection('listing_urls')
     for (group of groups){
         groupName = group.group
         for (url of group.urls){
             //for each category tag of this item, find all category ids from the stadard category list
             catIds = []
+            let all_valid = true
             for (cat of url.category){
-                if (cat.includes('/')){
-                    splits = cat.split('/')
-                    if (splits.length > 2){
-                        console.log('warning: does not support category with 3 levels: ', cat)
-                        catName = splits[0]
-                    }else{
-                        parent =  splits[1]
-                        catName = splits[0]
-                    }
-                }else{
-                    catName = cat
-                    parent = ''
-                }
-
-                //assert that this category exists
-                ret = await colCat.find({name:catName, parent:parent, group:groupName}).toArray()
-                if (ret.length !== 1){
-                    console.log("check the URL. not found category for this URL: ", url)
-                }else{
-                    catIds.push(ret[0]._id)
+                all_valid = await isValidCategory(db, cat)
+                if (!all_valid){
+                    console.log('warning: invalid category tag', url, cat)
+                    break
                 }
             }
             
-            //ensure that url category tags are matched with the standard category list
-            if (catIds.length !== url.category.length){
-                console.log('categories are mismatched. ')
-            }else{
+            if (all_valid === true){
                 query = {url:url.url}
+                _id = sha1(url.url)
                 //TODO: category reference to "pure category" for the sake of clearance now
-                data = {url:url.url, brand:brandName, group:groupName, cattags:url.category, cattagids: catIds}
+                data = {_id:_id, url:url.url, brand:brandName, group:groupName, categories:url.category}
                 await colUrl.findOneAndUpdate(query, {$set : data}, {upsert:true})
             }
         }

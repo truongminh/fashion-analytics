@@ -11,7 +11,7 @@
         
                 {
                     "url" : "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/ao-khoac-",
-                    "category" : ["jackets/outerwear"]
+                    "category" : ["outerwear/jackets"]
                 },
         
                 {
@@ -21,12 +21,12 @@
                 
                 {
                     "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/ao-so-mi-",
-                    "category" : ["shirts-and-blouses"]
+                    "category" : ["shirts-and-blouses/shirts"]
                 },
                 
                 {
                     "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nu/ao-thun-",
-                    "category" : ["t-shirts/tops"]
+                    "category" : ["tops/t-shirts"]
                 },
                 
                 {
@@ -65,15 +65,15 @@
                 },
                 {
                     "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/ao-so-mi-",
-                    "category": ["shirts"]
+                    "category": ["shirts-and-blouses/shirts"]
                 },
                 {
                     "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/ao-thun-",
-                    "category": ["t-shirts/tops"]
+                    "category": ["tops/t-shirts"]
                 },
                 {
                     "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/ao-thun-polo",
-                    "category": ["polos/tops"]
+                    "category": ["tops/polos"]
                 },
                 {
                     "url": "http://www.ninomaxx.com.vn/san-pham/ninomaxx/nam/quan-dai",
