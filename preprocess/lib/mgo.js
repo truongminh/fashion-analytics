@@ -14,16 +14,29 @@ async function RawDBFactory({RAW_DB_URL}) {
     console.log(RAW_DB_URL)
     const db = await Connect({url : RAW_DB_URL});
     console.log("Connected to mongodb");
-    
+    const colNameKv = 'kv'
+
     const list = async (ctx, brand) => {
         const col = db.collection(brand)
         const query = {}
         return col.find(query)
     };
 
+    const findOneAndDeleteProductRef = async(ctx, brand, query) => {
+        const col = db.collection(brand)
+        return col.findOneAndDelete(query)
+    };
+
+    const findOneProduct = async(ctx, query) => {
+        const col = db.collection(colNameKv)
+        return col.findOne(query)
+    };
+
     return {
         name : 'raw-mongodb',
-        list
+        list,
+        findOneAndDeleteProductRef,
+        findOneProduct
     }
 }
 
