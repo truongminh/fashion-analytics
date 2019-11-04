@@ -38,7 +38,7 @@ function extractPriceRecord(product){
 
 async function updateProducts(opts, brand) {
     try {
-        ctx = {}
+        const ctx = {}
         docCursor = await opts.rawdb.list(ctx, brand)
         prodRef = await opts.rawdb.findOneAndDeleteProductRef(ctx, brand, {})
         while (prodRef.value !== null) {
@@ -83,19 +83,31 @@ async function updateProducts(opts, brand) {
             }
             prodRef = await opts.rawdb.findOneAndDeleteProductRef(ctx, brand, {})
         }
-    }catch (error){
+    } catch (error){
         console.log(error)
     }
+}
+
+function sleep(ms){
+    return new Promise(resolve=>{
+        setTimeout(resolve,ms)
+    })
 }
 
 async function main() {
     const opts = await init();
     const brands = ["ninomax", "canifa", "ivymoda"]
+
     try{
-        Promise.all(brands.map(async (brand) =>  {
-            await updateProducts(opts, brand)
-        }))
-    }catch(error){
+        while (true){
+                await Promise.all(brands.map(async (brand) =>  {
+                    await updateProducts(opts, brand)
+                }))
+
+            const minutes = 15
+            await sleep(minutes*60*1000)
+        }
+    } catch(error){
         console.log(error.stack || e)
     }
 }
