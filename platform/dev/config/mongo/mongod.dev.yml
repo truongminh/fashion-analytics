@@ -1,0 +1,27 @@
+processManagement:
+   fork: false
+   pidFilePath: /tmp/fas_dev_mongod.pid
+net:
+   bindIp: 0.0.0.0
+   port: 48018
+storage:
+   dbPath: data/mongo
+systemLog:
+   quiet: true
+   # destination: file
+   # path: log/mongo/mongod.log
+   # logAppend: true
+   verbosity: 1
+   component:
+      query:
+         verbosity: 2
+      storage:
+         verbosity: 2
+         journal:
+            verbosity: 1
+storage:
+   journal:
+      enabled: false
+
+security:
+   authorization: enabled
